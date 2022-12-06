@@ -1,0 +1,23 @@
+.catalog {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .product-card {
+    width: 320px;
+    margin-bottom: 2rem;
+
+    .product-header {
+      justify-content: center;
+    }
+
+    .product-img {
+      height: 350px;
+      background-size: cover;
+    }
+
+    .product-actions {
+      justify-content: flex-end;
+    }
+  }
+}

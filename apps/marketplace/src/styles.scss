@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  background: url("https://media.gq.com/photos/629fb9435de8bd3714a3b9fd/master/w_2000,h_1333,c_limit/kapital_soho-14.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  body {
+    margin: 0;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.green-snackbar {
+  background: rgb(65, 252, 134);
+  color: white;
+}
+.green-snackbar button {
+  background: rgb(65, 252, 134);
+  color: white;
+  border: none;
+}

@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@tasks/marketplace/basket": ["libs/marketplace/basket/src/index.ts"],
+      "@tasks/marketplace/checkout": ["libs/marketplace/checkout/src/index.ts"],
+      "@tasks/marketplace/data-access": [
+        "libs/marketplace/data-access/src/index.ts"
+      ],
+      "@tasks/marketplace/page": ["libs/marketplace/page/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

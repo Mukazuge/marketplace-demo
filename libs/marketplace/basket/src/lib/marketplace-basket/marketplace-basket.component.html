@@ -1,0 +1,33 @@
+<section *ngIf="(getClientShoppingStatus$ | async)!.basketCount > 0; else emptyBasketView">
+  <div class="basket-container">
+    <div class="basket-summary">
+      <span class="total-price">total: {{(clientTotalBasketPrice$ | async) | currency}}</span>
+      <button mat-raised-button color="accent" (click)="checkout()">Checkout</button>
+    </div>
+    <mat-card class="basket-card" *ngFor="let item of (basket$ | async)">
+      <mat-card-header>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.price | currency}}</mat-card-subtitle>
+      </mat-card-header>
+      <img class="basket-img" mat-card-image [src]="item.imgUrl" alt="basket product img">
+      <mat-card-actions class="basket-actions">
+        <button
+          (click)="removeItem(item)"
+          mat-mini-fab
+          color="warn"
+          aria-label="Example icon button with a filter list icon"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
+
+<ng-template #emptyBasketView>
+  <div class="empty-basket-container">
+    <img [src]="dogUrl" alt="empty basket guardian dog" class="dog-img">
+    <span class="empty-basket-msg">Looks like you haven't added any items to your basket yet</span>
+  </div>
+</ng-template>
+

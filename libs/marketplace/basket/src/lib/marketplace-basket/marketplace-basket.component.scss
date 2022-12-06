@@ -1,0 +1,56 @@
+.basket-container {
+  display: grid;
+  grid-template-columns: 250px 250px;
+  justify-content: center;
+  grid-gap: 2rem;
+
+  .basket-card {
+    width: 250px;
+    //margin-bottom: 2rem;
+
+    .basket-img {
+      height: 250px;
+    }
+  }
+
+  .basket-actions {
+    justify-content: flex-end;
+  }
+}
+
+.basket-summary {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  align-items: center;
+  background: white;
+  flex-basis: auto;
+  border-radius: 8px;
+  box-shadow: rgb(255 255 255 / 10%) 0 1px 1px 0 inset, rgb(50 50 93 / 25%) 0 50px 100px -20px, rgb(0 0 0 / 30%) 0 30px 60px -30px;
+
+  .total-price {
+    margin-right: 2rem;
+    font-size: 25px;
+  }
+}
+
+.empty-basket-container {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  align-items: center;
+  padding: 0.5rem;
+
+  .dog-img {
+    height: 400px;
+    border-radius: 4px;
+  }
+
+  .empty-basket-msg {
+    color: #ff4081;
+    font-weight: 700;
+    font-size: 18px;
+  }
+}

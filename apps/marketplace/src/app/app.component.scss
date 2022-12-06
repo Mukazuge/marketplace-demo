@@ -1,0 +1,52 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav#main-header {
+  width: 100%;
+  padding-top: 40px;
+
+  .marketplace-header {
+    font-family: Snell Roundhand, cursive;
+    line-height: 1.4;
+    padding-left: 2rem;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.5);
+    font-size: 70px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset, rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
+  }
+
+  .client-status {
+    position: fixed;
+    right: 136px;
+    top: 60px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .current-currency {
+      margin-right: 2rem;
+    }
+
+    .basket-count, .current-currency {
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .mat-icon {
+      font-size: 35px;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+.content {
+  padding: 2rem 6rem;
+  max-height: 750px;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+}

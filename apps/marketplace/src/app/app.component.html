@@ -1,1 +1,25 @@
-<tasks-nx-welcome></tasks-nx-welcome>
+<main>
+<!--  todo this should be on its own component-->
+  <nav id="main-header">
+    <a routerLink="/">
+      <h1 class="marketplace-header">{{(marketPlace$ | async)?.name}}</h1>
+    </a>
+
+    <div class="client-status">
+      <div class="current-currency">
+        <mat-icon>wallet</mat-icon>
+        {{(getClientShoppingStatus$ | async)?.wallet | currency}}
+      </div>
+      <div class="basket-count">
+        <a routerLink="/basket">
+          <mat-icon>shopping_basket</mat-icon>
+          {{(getClientShoppingStatus$ | async)?.basketCount}}
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</main>
